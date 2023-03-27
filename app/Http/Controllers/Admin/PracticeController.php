@@ -46,9 +46,9 @@ class PracticeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Practice $practice)
     {
-        return view('admin.practices.show');
+        return view('admin.practices.show', compact('practice'));
     }
 
     /**
@@ -80,8 +80,9 @@ class PracticeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Practice $practice)
     {
-        //
+        $practice->delete();
+        return redirect()->route('admin.practices.index')->with('message', "$practice->plate deleted successfully");
     }
 }

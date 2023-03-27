@@ -1,0 +1,50 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+
+.side-bar {
+    width: 20%;
+    min-width: 250px;
+    min-height: 100vh;
+    background-color: grey;
+    padding: 1rem;
+    position: relative;
+
+    #close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        font-size: 24px;
+        padding: 20px;
+        cursor: pointer;
+        display: none;
+    }
+
+    ul {
+        .title {
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0.8rem;
+        }
+
+        li {
+            font-size: 1.1rem;
+            padding: 0.8rem;
+
+            div {
+                display: inline-block;
+            }
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    a {
+        color: white;
+    }
+}
