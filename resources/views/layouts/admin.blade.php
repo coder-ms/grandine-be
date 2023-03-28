@@ -25,10 +25,14 @@
 <body>
     <div class="d-flex">
         @include('partials.admin.sidebar')
-        <main id="main-container" class="position-relative">
-            <div id="overlay" class="side-overlay">
-                @include('partials.admin.header')
-            </div>
+
+        
+        <main>
+            
+                
+                <header class="w-100">
+                    @include('partials.admin.header')
+                </header> 
             
             @yield('content')
             {{-- @include('partials.admin.footer') --}}

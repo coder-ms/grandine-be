@@ -3,23 +3,22 @@
 
 
 .side-bar {
-    width: 20%;
-    min-width: 250px;
+    width: 250px;
     min-height: 100vh;
     background-color: grey;
     padding: 1rem;
     position: relative;
 
-    #close {
-        position: absolute;
-        top: 0;
-        right: 0;
-        color: white;
-        font-size: 24px;
-        padding: 20px;
-        cursor: pointer;
-        display: none;
-    }
+    // #close {
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     color: white;
+    //     font-size: 24px;
+    //     padding: 20px;
+    //     cursor: pointer;
+    //     display: none;
+    // }
 
     ul {
         .title {
@@ -27,12 +26,35 @@
             text-transform: uppercase;
             font-size: 1.5rem;
             font-weight: bold;
-            padding: 0.8rem;
+            padding: 0.8rem 0;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+            }
+
         }
 
         li {
-            font-size: 1.1rem;
-            padding: 0.8rem;
+            font-size: 1rem;
+            padding: 0.8rem 0;
+            margin-bottom: 0.25rem;
+            list-style-type: none;
+
+            &:not(:first-child) {
+                border: 1px solid white;
+                border-radius: 15px;
+
+                a {
+                    padding-left: 5px;
+                }
+            }
+
+
+            a {
+                text-decoration: none;
+            }
+
 
             div {
                 display: inline-block;
