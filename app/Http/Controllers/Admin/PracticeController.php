@@ -3,26 +3,26 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StorePracticeRequest;
+use App\Http\Requests\UpdatePracticeRequest;
 use App\Models\Practice;
 
 class PracticeController extends Controller
 {
-    /**
+    /*
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function index()
     {
         $practices = Practice::all();
+
         return view('admin.practices.index', compact('practices'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -33,14 +33,12 @@ class PracticeController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePracticeRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
         $slug = Practice::generateSlug($request->plate);
         $data['slug'] = $slug;
-
         $new_practice = Practice::create($data);
         return redirect()->route('admin.practices.show', $new_practice->slug);
     }
@@ -49,7 +47,6 @@ class PracticeController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
     public function show(Practice $practice)
     {
@@ -60,11 +57,10 @@ class PracticeController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Practice $practice)
     {
-        return view('admin.practices.edit');
+        return view('admin.practices.edit', compact('practice'));
     }
 
     /**
@@ -72,22 +68,26 @@ class PracticeController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePracticeRequest $request, Practice $practice)
     {
-        //
+        $data = $request->validated();
+        $slug = Practice::generateSlug($request->plate);
+        $data['slug'] = $slug;
+
+        $practice->update($data);
+        return redirect()->route('admin.practices.index')->with('message', "$practice->title updated successfully");
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\Practice  $practice
+     *
      */
     public function destroy(Practice $practice)
     {
         $practice->delete();
-        return redirect()->route('admin.practices.index')->with('message', "$practice->plate deleted successfully");
+        return redirect()->route('admin.practices.index')->with('message', "$practice->title deleted successfully");
     }
 }

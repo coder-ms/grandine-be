@@ -16,11 +16,6 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-client-2" type="button" role="tab" aria-controls="pills-client"  aria-selected="false">Cliente pt.2</button> 
             </li>
-            {{-- 
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-profile-tab" data-mdb-toggle="pill" data="#pills-client" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="false">Tab 3</button> 
-                </li> 
-            --}}
         </ul>
         <!-- Tabs content -->
         <div class="tab-content" id="pills-tabContent">
