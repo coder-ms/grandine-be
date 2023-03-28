@@ -20,6 +20,14 @@ return new class extends Migration {
             $table->string('color', 150);
             $table->string("immatricolation", 4);
             $table->string('cover')->nullable();
+            // PROPRIETARIO
+            $table->string('owner')->unique();
+            $table->string('tax_id_code', 16)->unique();
+            $table->string('birthplace');
+            $table->date('birth');
+            $table->string('residence');
+            $table->string('phone_number', 10)->unique();
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

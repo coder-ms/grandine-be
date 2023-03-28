@@ -16,7 +16,7 @@ table {
     //border-collapse: collapse;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
+    min-width: 30vw;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     margin-left: 30px;
 
@@ -28,7 +28,7 @@ table {
 
     th,
     td {
-        padding: 12px 15px;
+        padding: 10px;
     }
 
     tbody tr {
@@ -70,12 +70,6 @@ h2 {
 .add {
     margin: 2rem;
 }
-
-// .navbar-scss {
-//     //position: fixed;
-//     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-//     width: 100%;
-// }
 
 .header-scss {
     //margin-bottom: 40px;

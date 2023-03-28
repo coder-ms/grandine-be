@@ -34,13 +34,13 @@
                         <th scope="col">Tecnico</th>
                         <th scope="col">Status</th>
                         <th scope="col">Assicurazione</th> --}}
-                        {{-- <th scope="col">Nome Proprietario</th>
+                        <th scope="col">Proprietario</th>
                         <th scope="col">Codice Fiscale</th>
-                        <th scope="col">Luogo di Nascita</th>
-                        <th scope="col">Data di Nascita</th>
-                        <th scope="col">Luogo di Residenza</th>
+                        <th scope="col">Nato a</th>
+                        <th scope="col">Nato il</th>
+                        <th scope="col">Residenza</th>
                         <th scope="col">Telefono</th>
-                        <th scope="col">Email</th> --}}
+                        <th scope="col">Email</th> 
                     </tr>
                 </thead>
                 <tbody>
@@ -113,13 +113,13 @@
                             @else
                                 <p>{{'Senza status'}}</p>
                             @endif</td> --}}
-                            {{-- <td>{{$practice->owner_name}}</td>
-                            <td>{{$practice->owner_tax_id_code}}</td>
-                            <td>{{$practice->owner_birth_place}}</td>
-                            <td>{{$practice->owner_dob}}</td>
-                            <td>{{$practice->owner_residence}}</td>
-                            <td>{{$practice->owner_phone_number}}</td>
-                            <td>{{$practice->owner_email}}</td> --}}
+                            <td>{{$practice->owner}}</td>
+                            <td>{{$practice->tax_id_code}}</td>
+                            <td>{{$practice->birthplace}}</td>
+                            <td>{{$practice->birth}}</td>
+                            <td>{{$practice->residence}}</td>
+                            <td>{{$practice->phone_number}}</td>
+                            <td>{{$practice->email}}</td>
                         </tr>
                     @endforeach
                 </tbody>

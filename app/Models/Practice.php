@@ -10,7 +10,7 @@ class Practice extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['plate', 'slug', 'model', 'color', 'immatricolation', 'cover'];
+    protected $guarded = [];
 
     public static function generateSlug($plate)
     {

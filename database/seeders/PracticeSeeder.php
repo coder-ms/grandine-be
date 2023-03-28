@@ -29,6 +29,14 @@ class PracticeSeeder extends Seeder
             $new_practice->color = $practice['color'];
             $new_practice->immatricolation = $practice['immatricolation'];
             $new_practice->cover = $practice['cover'];
+            // PROPRIETARIO
+            $new_practice->owner = $practice['owner'];
+            $new_practice->tax_id_code = $practice['tax_id_code'];
+            $new_practice->birthplace = $practice['birthplace'];
+            $new_practice->birth = $practice['birth'];
+            $new_practice->residence = $practice['residence'];
+            $new_practice->phone_number = $practice['phone_number'];
+            $new_practice->email = $practice['email'];
             $new_practice->save();
         }
     }
