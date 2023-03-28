@@ -37,7 +37,12 @@ class PracticeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $slug = Practice::generateSlug($request->plate);
+        $data['slug'] = $slug;
+
+        $new_practice = Practice::create($data);
+        return redirect()->route('admin.practices.show', $new_practice->slug);
     }
 
     /**
