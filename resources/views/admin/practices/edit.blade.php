@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-{{-- <div class="container p-3 create-section">
+<div class="container p-3 create-section">
     <h2>MODIFICA PRATICA: {{$practice->plate}}</h2>
     <form action="{{route('admin.practices.update', $practice->slug)}}" method="POST" enctype="multipart/form-data" class="p-4">
         @csrf
@@ -16,12 +16,12 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-client-2" type="button" role="tab" aria-controls="pills-client"  aria-selected="false">Cliente pt.2</button> 
             </li>
-        </ul> --}}
+        </ul> 
         <!-- Tabs content -->
         <div class="tab-content" id="pills-tabContent">
 
             {{-- DATI AUTO --}}
-            {{-- <div class="tab-pane tab-height fade show active" id="pills-auto" role="tab-panel" aria-labelledby="pills-auto-tab">
+            <div class="tab-pane tab-height fade show active" id="pills-auto" role="tab-panel" aria-labelledby="pills-auto-tab">
                 <div class="mb-3">
                     <label for="plate" class="form-label">Targa<span>*</span></label>
                     <input type="text" class="form-control @error('plate') is-invalid @enderror" value="{{old('plate', $practice->plate)}}" id="plate" name="plate" required maxlength="7" minlength="7">
@@ -33,7 +33,7 @@
 
                 <div class="mb-3">
                     <label for="model" class="form-label">Modello<span>*</span></label>
-                    <input type="text" class="form-control @error('model') is-invalid @enderror" value="{{old('model', $practice->model)}}" id="model" name="model" required maxlength="50" minlength="3">
+                    <input type="text" class="form-control @error('model') is-invalid @enderror" value="{{old('model', $practice->model)}}" id="model" name="model"  maxlength="50" minlength="3">
                     @error('model')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -42,7 +42,7 @@
 
                 <div class="mb-3">
                     <label for="color" class="form-label">Colore <span>*</span></label>
-                    <input type="text" class="form-control @error('model') is-invalid @enderror" value="{{old('color', $practice->color)}}" id="color" name="color" required maxlength="50" minlength="3">
+                    <input type="text" class="form-control @error('model') is-invalid @enderror" value="{{old('color', $practice->color)}}" id="color" name="color"  maxlength="50" minlength="3">
                     @error('color')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -57,10 +57,10 @@
                     @enderror
                     <div class="form-text">* es. 1999</div>
                 </div>
-            </div> --}}
+            </div> 
 
             {{-- DATI CLIENTE --}}
-            {{-- <div class="tab-pane fade tab-height" id="pills-client-1" role="tab-panel" aria-labelledby="pills-client-tab-1">
+             <div class="tab-pane fade tab-height" id="pills-client-1" role="tab-panel" aria-labelledby="pills-client-tab-1">
                 <div class="mb-3">
                     <label for="owner" class="form-label">Nome <span>*</span></label>
                     <input type="text" class="form-control @error('owner') is-invalid @enderror" value="{{old('owner', $practice->owner)}}" id="owner" name="owner" required maxlength="50" minlength="3">
@@ -95,14 +95,14 @@
                 </div>
 
 
-            </div> --}}
+            </div> 
 
             {{-- DATI CLIENTE --}}
-            {{-- <div class="tab-pane fade tab-height" id="pills-client-2" role="tab-panel" aria-labelledby="pills-client-tab">
+             <div class="tab-pane fade tab-height" id="pills-client-2" role="tab-panel" aria-labelledby="pills-client-tab">
 
                 <div class="mb-3">
                     <label for="birthplace" class="form-label">Nato/a a<span>*</span></label>
-                    <input type="text" name="birthplace" id="birthplace" class="form-control  @error('birthplace') is-invalid @enderror" value="{{old('birthplace', $practice->birthplace)}}" required minlength="2" maxlength="255">
+                    <input type="text" name="birthplace" id="birthplace" class="form-control  @error('birthplace') is-invalid @enderror" value="{{old('birthplace', $practice->birthplace)}}"  minlength="2" maxlength="255">
                     @error('birthplace')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -111,7 +111,7 @@
 
                 <div class="mb-3">
                     <label for="birth" class="form-label">Nato/a il<span>*</span></label>
-                    <input type="text" name="birth" id="birth" class="form-control  @error('birth') is-invalid @enderror" value="{{old('birth', $practice->birth)}}" required maxlength="10" minlength="10">
+                    <input type="text" name="birth" id="birth" class="form-control  @error('birth') is-invalid @enderror" value="{{old('birth', $practice->birth)}}"  maxlength="10" minlength="10">
                     @error('birth')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -120,7 +120,7 @@
 
                 <div class="mb-3">
                     <label for="residence" class="form-label">Residenza<span>*</span></label>
-                    <input type="text" name="residence" id="residence" class="form-control  @error('residence') is-invalid @enderror" value="{{old('residence', $practice->residence)}}" required minlength="2" maxlength="255">
+                    <input type="text" name="residence" id="residence" class="form-control  @error('residence') is-invalid @enderror" value="{{old('residence', $practice->residence)}}"  minlength="2" maxlength="255">
                     @error('residence')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -131,5 +131,5 @@
 
         </div>
         <button type="submit" class="btn btn-primary">Inserisci</button>
-        <button type="reset" id="reset" class="btn btn-danger text-white">Resetta</button> --}}
+        <button type="reset" id="reset" class="btn btn-danger text-white">Resetta</button>
 @endsection

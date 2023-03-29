@@ -16,6 +16,11 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-client-2" type="button" role="tab" aria-controls="pills-client"  aria-selected="false">Cliente pt.2</button> 
             </li>
+            {{-- 
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-profile-tab" data-mdb-toggle="pill" data="#pills-client" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="false">Tab 3</button> 
+                </li> 
+            --}}
         </ul>
         <!-- Tabs content -->
         <div class="tab-content" id="pills-tabContent">
@@ -42,7 +47,7 @@
 
                 <div class="mb-3">
                     <label for="color" class="form-label">Colore <span>*</span></label>
-                    <input type="text" class="form-control @error('model') is-invalid @enderror" value="{{old('color')}}" id="color" name="color" required maxlength="50" minlength="3">
+                    <input type="text" class="form-control @error('model') is-invalid @enderror" value="{{old('color')}}" id="color" name="color"  maxlength="50" minlength="3">
                     @error('color')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -76,7 +81,7 @@
                     @error('tax_id_code')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
-                    <div class="form-text">*es. SRCCRS56E12CL219J</div>
+                    <div class="form-text">*es. SRCCRS56E12L219J</div>
                 </div>
 
                 <div class="mb-3">
@@ -88,7 +93,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email <span>*</span></label>
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" required maxlength="100" minlength="3">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email"  maxlength="100" minlength="3">
                     @error('email')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -102,7 +107,7 @@
 
                 <div class="mb-3">
                     <label for="birthplace" class="form-label">Nato/a a<span>*</span></label>
-                    <input type="text" name="birthplace" id="birthplace" class="form-control  @error('birthplace') is-invalid @enderror" required minlength="2" maxlength="255">
+                    <input type="text" name="birthplace" id="birthplace" class="form-control  @error('birthplace') is-invalid @enderror" minlength="2" maxlength="255">
                     @error('birthplace')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -111,7 +116,7 @@
 
                 <div class="mb-3">
                     <label for="birth" class="form-label">Nato/a il<span>*</span></label>
-                    <input type="text" name="birth" id="birth" class="form-control  @error('birth') is-invalid @enderror" required maxlength="10" minlength="10">
+                    <input type="text" name="birth" id="birth" class="form-control  @error('birth') is-invalid @enderror"  maxlength="10" minlength="10">
                     @error('birth')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -120,7 +125,7 @@
 
                 <div class="mb-3">
                     <label for="residence" class="form-label">Residenza<span>*</span></label>
-                    <input type="text" name="residence" id="residence" class="form-control  @error('residence') is-invalid @enderror" required minlength="2" maxlength="255">
+                    <input type="text" name="residence" id="residence" class="form-control  @error('residence') is-invalid @enderror"  minlength="2" maxlength="255">
                     @error('residence')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror

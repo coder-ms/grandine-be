@@ -38,25 +38,25 @@ class StorePracticeRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'plate.required' => 'La targa è obbligatoria.',
-            'plate.unique:practices' => 'La targa esiste già',
+// public function messages()
+// {
+//     return [
+//         'plate.required' => 'La targa è obbligatoria.',
+//         'plate.unique:practices' => 'La targa esiste già',
 
-            'email.required' => 'L\'email è obbligatoria.',
-            'email.min' => 'L\'email deve essere lunga almeno :min caratteri.',
-            'email.max' => 'L\'email non può superare i :max caratteri.',
-            'email.unique:practices' => 'L\'email esiste già',
+//         'email.required' => 'L\'email è obbligatoria.',
+//         'email.min' => 'L\'email deve essere lunga almeno :min caratteri.',
+//         'email.max' => 'L\'email non può superare i :max caratteri.',
+//         'email.unique:practices' => 'L\'email esiste già',
 
-            'residence.required' => 'L\'indirizzo è obbligatorio.',
-            'residence.min' => 'L\'indirizzo deve essere lungo almeno :min caratteri.',
-            'residence.max' => 'L\'indirizzo non può superare i :max caratteri.',
+//         'residence.required' => 'L\'indirizzo è obbligatorio.',
+//         'residence.min' => 'L\'indirizzo deve essere lungo almeno :min caratteri.',
+//         'residence.max' => 'L\'indirizzo non può superare i :max caratteri.',
 
-            'phone_number.required' => 'Il numero di telefono è obbligatorio.',
-            'phone_number.size' => 'Il numero di telefono deve essere lungo esattamente :size caratteri.',
-            'phone_number.regex' => 'Il numero di telefono può contenere solo numeri.',
-            'phone_number.unique:practices' => 'Il numero di telefono esiste già',
-        ];
-    }
+//         'phone_number.required' => 'Il numero di telefono è obbligatorio.',
+//         'phone_number.size' => 'Il numero di telefono deve essere lungo esattamente :size caratteri.',
+//         'phone_number.regex' => 'Il numero di telefono può contenere solo numeri.',
+//         'phone_number.unique:practices' => 'Il numero di telefono esiste già',
+//     ];
+// }
 }

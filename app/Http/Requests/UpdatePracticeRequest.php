@@ -33,7 +33,7 @@ class UpdatePracticeRequest extends FormRequest
             'birthplace' => 'required|max:255|min:3',
             'birth' => 'required|max:10|min:10',
             'residence' => 'required|max:255|min:3',
-            'phone_number' => 'required|regex:/^([0-9]*)$/|size:10',
+            'phone_number' => 'regex:/^([0-9]*)$/|size:10',
             'email' => 'required|email|max:100|min:3',
         ];
     }

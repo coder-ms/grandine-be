@@ -30,6 +30,7 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')
         Route::resource('practices', PracticeController::class)->parameters(['practices' => 'practice:slug']);
     });
 
+//Route::get("/prova", [PracticeController::class, "store"]);
 /*
 Route::middleware('auth')->group(function () {
 Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
